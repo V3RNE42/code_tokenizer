@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js"></script>
+    <title>Code Tokenizer</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Code Tokenizer</h1>
+    </div>
+    <div class="container">
+        <span>
+            El propósito de esta página es <b> facilitarte el trabajo con ChatGPT:</b>, 
+            <br>
+            para aquellos casos en los que tu código exceda el número máximo de tokens del chat ( <b>2048</b> )
+        </span>
+        <br>
+        <div class="intro">
+            <ul>
+                <li>1. Selecciona el archivo basado en texto que quieres procesar - .txt, .js, .md, .py, etc...</li>
+                <li>2. Presiona el botón "Procesar"</li>
+                <li>3. Espera a que se descarguen los archivos procesados - cada uno estará dentro del límite máximo de tokens del chat</li>
+                <li>4. ¡Listo! Ya puedes subir el archivo procesado a ChatGPT</li>
+            </ul>
+        </div>
+        <input type="file" id="file-input" placeholder="Sube tu archivo"/>
+        <br>
+        <button id="process-button" class="process-button"><b>Procesar</b></button>
+    </div>
+    <footer>
+        <div class="footer">
+            <span>
+                <b>Code Tokenizer</b> - <a href="" target="_blank">GitHub</a>
+            </span>
+        </div>
+    </footer>
+</body>
+</html>
