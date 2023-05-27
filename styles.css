@@ -15,12 +15,28 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 60%;
 }
+
 .intro {
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 20px;
     text-align: start;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .input-field {
@@ -30,11 +46,9 @@ body {
     border: 1px solid #ddd;
 }
 
-.process-button {
-    background-color: #4CAF50;
+.process-button, .copy-button {
+    background-color: #0d97d2;
     font-size: larger;
-    min-width: 15%;
-    min-height: 10%;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -43,10 +57,29 @@ body {
     margin-top: 10px;
 }
 
-.process-button:hover {
-    background-color: #45a049;
+.process-button:hover, .copy-button:hover {
+    background-color: #0b40b1;
 }
 
 footer {
     margin: 3.5rem;
+}
+
+button {
+    margin: 1.25rem;
+    padding: auto;
+    font-size: 1.25rem;
+    border-radius: 0.25rem;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+}
+
+button label {
+    display: block;
+    padding: 10px;
+}
+
+input[type="file"] {
+    display: none;
 }

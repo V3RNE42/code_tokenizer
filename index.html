@@ -1,32 +1,52 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="script.js"></script>
     <title>Code Tokenizer</title>
 </head>
+
 <body>
     <div class="header">
         <h1>Code Tokenizer</h1>
     </div>
     <div class="container">
         <span>
-            El propósito de esta página es <b> facilitarte el trabajo con ChatGPT:</b>, 
+            El propósito de esta página es <b> facilitarte el trabajo con ChatGPT:</b>,
             <br>
-            para aquellos casos en los que tu código exceda el número máximo de tokens del chat ( <b>2048</b> )
+            para aquellos casos en los que tu texo o código exceda el número máximo de tokens del chat ( <b>2048</b> )
         </span>
         <br>
         <div class="intro">
             <ul>
-                <li>1. Selecciona el archivo basado en texto que quieres procesar - .txt, .js, .md, .py, etc...</li>
-                <li>2. Presiona el botón "Procesar"</li>
-                <li>3. Espera a que se descarguen los archivos procesados - cada uno estará dentro del límite máximo de tokens del chat</li>
-                <li>4. ¡Listo! Ya puedes subir por orden cada archivo procesado a ChatGPT</li>
+                <li>1.  Selecciona el archivo (o carpeta con archivos) que quieres procesar - .txt, .js, .md, .py, etc...</li>
+                <li>2.  Los archivos serán serán divididos en trocitos, cada uno dentro del límite máximo de tokens del ChatGPT</li>
+                <ul>
+                    <li>3.a - Puedes copiar cada trozo al portapapeles presionando el botón "Copiar al portapapeles". El botón mostrará el porcentaje de partes copiadas</li>
+                    <li>3.b - Presiona el botón "Procesar" para descargar los trocitos y usarlos más adelante</li>
+                </ul>
+                <li>4.  ¡Listo! Ya puedes subir por orden cada parte copiada a ChatGPT</li>
             </ul>
         </div>
-        <input type="file" id="file-input" placeholder="Sube tu archivo"/>
-        <br>
-        <button id="process-button" class="process-button"><b>Procesar</b></button>
+        <div class="column">
+            <div class="row">
+                <button>
+                    <label for="folder-input">Sube tu carpeta</label>
+                    <input name="folder-input" type="file" id="folder-input" webkitdirectory mozdirectory msdirectory odirectory directory multiple />
+                </button>
+                <br>
+                <button>
+                    <label for="file-input">Sube tu archivo</label>
+                    <input name="file-input" type="file" id="file-input" />
+                </button>
+            </div>
+            <div class="row">
+                <button id="copy-button" class="copy-button"><b>Copiar al portapapeles</b></button>
+                <br>
+                <button id="process-button" class="process-button"><b>Procesar</b></button>
+            </div>
+        </div>
     </div>
     <footer>
         <div class="footer">
@@ -36,4 +56,5 @@
         </div>
     </footer>
 </body>
+
 </html>
